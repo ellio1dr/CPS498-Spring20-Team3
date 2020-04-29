@@ -24,8 +24,9 @@ public class timer : MonoBehaviour
             return;
 
         float f = Time.time - StarTime;
-
+        //converts f to minutes.
         string minutes = ((int)f / 60).ToString();
+        //converts f to seconds.
         string seconds = (f % 60).ToString("f0");
 
         TimerText.text = minutes + ":" + seconds;
