@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +10,7 @@ public class LevelSwitch : MonoBehaviour
         if(other.tag == "Player")
         {
             SceneManager.LoadScene(0);
+            GameObject.Find("FPSController").SendMessage("Finnish");
         }
     }
 }
